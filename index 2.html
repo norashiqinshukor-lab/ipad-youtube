@@ -1,0 +1,95 @@
+<div class="ipad-container">
+  <div class="ipad-frame">
+    <div class="ipad-camera"></div>
+
+    <div class="ipad-screen">
+      <iframe
+        src="https://www.youtube.com/embed/naUcqdJTvMc"
+        title="YouTube Video on iPad"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <div class="ipad-shadow"></div>
+</div>
+
+<style>
+.ipad-container {
+  width: 100%;
+  max-width: 850px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ipad-frame {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 22px;
+  position: relative;
+  background: linear-gradient(135deg, #454545, #111111, #333333);
+  border: 3px solid #666;
+  border-radius: 32px;
+  box-shadow:
+    0 20px 45px rgba(0,0,0,0.35),
+    inset 0 0 5px rgba(255,255,255,0.15);
+}
+
+.ipad-screen {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #000;
+}
+
+.ipad-screen iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.ipad-camera {
+  position: absolute;
+  top: 50%;
+  left: 9px;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #1c293b;
+  border: 1px solid #555;
+}
+
+.ipad-shadow {
+  width: 85%;
+  height: 15px;
+  margin-top: 12px;
+  background: rgba(0,0,0,0.15);
+  filter: blur(12px);
+  border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+  .ipad-frame {
+    padding: 13px;
+    border-radius: 20px;
+  }
+
+  .ipad-screen {
+    border-radius: 7px;
+  }
+
+  .ipad-camera {
+    left: 4px;
+    width: 4px;
+    height: 4px;
+  }
+}
+</style>
